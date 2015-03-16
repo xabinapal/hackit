@@ -15,24 +15,22 @@
 */
 
 function showhide() {
-    var btn = $("#showhidebtn");
-    var pwd = $("#password");
+    var btn = document.getElementById("showhidebtn");
+    var pwd = document.getElementById("password");
 
-    if (pwd.attr("type") == "password") {
-        //pwd.attr("type", "text"); JQuery dislikes this due to IE failing
-        pwd[0].type = "text"
-        btn.val("Ocultar")
+    if (pwd.type === "password") {
+        pwd.type = "text";
+        btn.value = "Ocultar";
     } else {
-        //pwd.attr("type", "password");
-        pwd[0].type = "password"
         pwd.type = "password";
-        btn.val("Mostrar")
+        btn.value = "Mostrar";
     }
 }
 
 function skip() {
     if (confirm("¿Seguro que quieres aparcar temporalmente este nivel?\n\nRecuerda que esta acción no se puede deshacer hasta que resuelvas el nivel.")) {
-        $('#skipform').submit();
+		var frm = document.getElementById("skipform");
+		frm.submit();
     }
 }
 
