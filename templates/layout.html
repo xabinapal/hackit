@@ -21,7 +21,7 @@
         <title>{% block title %}{{ config.SITE_NAME }}{% endblock %}</title>
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/screen.css') }}">
-        <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/screen_ie6.css') }}"><![endif]-->
+        <!--[if IE 6]><style type="text/css">* { zoom: 1; }</style><![endif]-->
         {#<link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}" sizes="16x16" />-#}
         <script src="{{ url_for('static', filename='js/jquery-1.6.1.min.js') }}" type="text/javascript"></script>
         <script src="{{ url_for('static', filename='js/scripts.js') }}" type="text/javascript"></script>
